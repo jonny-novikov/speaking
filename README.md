@@ -1,4 +1,4 @@
-Using AngularJS and Kinect 
+Проактивный подход к разработке
 ============================
 
-Showcase in a slides. Only Russian version is ready. Start ru.index.html in your web browser.
+Слайды презентации
