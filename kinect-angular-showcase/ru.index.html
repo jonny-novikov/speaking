@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Kinected AngularJS</title>
+
+    <meta name="description" content="AngularJS and Kinect showcase">
+    <meta name="author" content="Jonny Novikov">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.fullscreen.css">
+    <link rel="stylesheet" href="css/overrides.css">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body id="body">
+<div class="reveal">
+
+<div class="slides">
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Вступление
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section class="red">
+    <img src="images/logo.png" alt="AngularJS">
+    <a class="no-bg" href="ru.kinect.html">
+        <img class="kinect-logo no-bg" src="images/kinect-logo.png" alt="Kinect">
+    </a>
+
+    <h1>AngularJS + Kinect</h1>
+    <p class="fragment fade-in">Часть 1</p>
+</section>
+
+<section class="orange">
+   
+    <section>
+    <h1>Кто я?</h1>
+    </section>
+	
+    <section>
+        <img src="images/jonny.png" alt="Jonny">
+        <h2>Ivan Novikov</h2>
+        <p>Software developer</p>
+        <p><a href="http://jonnynovikov.com/" target="_blank">http://jonnynovikov.com/</a></p>
+    </section>
+
+</section>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Знакомство
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section class="blue">
+    <section>
+        <h2>Клиентская разработка с помощью AngularJS</h2>
+
+        <p class="fragment fade-in">История AngularJS</p>
+
+        <p class="fragment fade-in">Hello AngularJS!</p>
+
+        <p class="fragment fade-in">Преимущества использования</p>
+    </section>
+
+    <section>
+        <h2>История AngularJS</h2>
+
+        <p class="fragment fade-in">Разработан в 2009 товарищем Misko Hevery.</p>
+
+        <p class="fragment fade-in">Официально представлена версия 0.9.0 в октябре 2010</p>
+
+        <p class="fragment fade-in">Текущая версия 1.3.0. Активно поддерживается инженерами Google.</p>
+    </section>
+
+    <section>
+        <h2>Хотите быть счастливым frontend разработчиком?</h2>
+
+        <p class="fragment fade-in"><img height="500px" src="images/angularjs-team.jpg"/></p>
+
+    </section>
+
+    <section>
+        <h1>Внимание! Демка!</h1>
+        <a href="examples/hello/index.html" target="_blank"><img src="images/writting-code.gif" alt="Code!"></a>
+    </section>
+
+    <section>
+        <a href="examples/hello/index.html" target="_blank"><h2>Hello AngularJS!</h2></a>
+            <pre class="big-code fragment fade-in"><code data-trim>
+// script.js
+(function() {
+    angular.module('helloApp', [])
+    .controller('hello', function ($scope) {
+        $scope.message = 'AngularJS!';
+    });
+})();
+// index.html
+&lt;html ng-app="helloApp"&gt;
+    &lt;body ng-controller="hello"&gt;
+        &lt;h1&gt;Hello {{message}}&lt;/h1&gt;
+    &lt;/body>
+&lt;/html&gt
+            </code></pre>
+    </section>
+    <section>
+        <h1>Правило 80/20</h1>
+    </section>
+
+    <section>
+        <h1>Так почему все-таки?</h1>
+        <p><img src="images/angularjs-love.png" alt="Love AngularJS!"/></p>
+    </section>
+
+    <section>
+        <h2>Преимущества AngularJS</h2>
+
+        <p class="fragment fade-in">Интуитивный framework помогает вам лучше организовать свой код.</p>
+
+        <p class="fragment fade-in">Декларативный подход вместо императивного.</p>
+
+        <p class="fragment fade-in">Отсутствие макаронного кода улучшает сон.</p>
+
+        <p class="fragment fade-in">Разделение клиентской и серверной стороны, что позволяет вести разработку параллельно.</p>
+
+        <p class="fragment fade-in">Представления - это HTML, а значит вы уже умеете их писать.</p>
+
+        <p class="fragment fade-in">Структуры данных - обычные JavaScript переменные легко интегрируются с любой другой технологией. </p>
+
+        <p class="fragment fade-in">Моей проектной команде удалось его скрестить с Kinect SDK. </p>
+
+        <p class="fragment fade-in">...И этот список у меня очень большой</p>
+     </section>
+
+    <section>
+        <h2>Нужны еще аргументы?</h2>
+        <h3 class="fragment fade-in">Размер community</h3>
+        <p class="fragment fade-in"><img src="images/github-watchers-javascript-mvc-frameworks.png"/></p>
+    </section>
+
+    <section>
+        <h2>Нужны еще аргументы?</h2>
+        <h3 class="fragment fade-in">Рост функциональности</h3>
+        <p class="fragment fade-in"><img src="images/github-watchers-growth-javascript-mvc-frameworks3.png"/></p>
+    </section>
+
+    <section>
+        <h2>Что дальше?</h2>
+        <h3 class="fragment fade-in">AngularJS 2.0 - mobile framework?</h3>
+        <p class="fragment fade-in"><img src="images/iphones.png"/></p>
+    </section>
+
+    <section>
+        <h2>Что дальше?</h2>
+        <h3 class="fragment fade-in">Ionic framework = cross platform на базе AngularJS</h3>
+        <p class="fragment fade-in"><a href="http://slides.com/sebastiansassi/ionic"><img src="images/angularjs-ionic-framework.jpg"/></a></p>
+    </section>
+</section>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+AngularJS изнутри
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section class="green">
+
+    <section>
+        <h2>Магия AngularJS</h2>
+    </section>
+
+    <section>
+        <h1>Внимание! Демка!</h1>
+        <a target="_blank" href="examples/orderform/index.html"><img src="images/writting-code.gif" alt="Code!"></a>
+    </section>
+
+    <section>
+        <img src="images/compile.png" alt="Compile">
+    </section>
+
+    <section>
+        <img src="images/digest.png" alt="Compile">
+    </section>
+
+
+</section>
+
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Интеграция с Server-side
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section class="red">
+    <section>
+        <h2>Интеграция с Server Side</h2>
+
+        <p class="fragment fade-in">REST and $resource</p>
+
+        <p class="fragment fade-in">Promises</p>
+
+
+    </section>
+    <section>
+        <h2>$resource</h2>
+
+        <p class="fragment fade-in">$resource это сервис взаимодействия с сервером, предоставляющим некоторый API (JSON, XML).</p>
+    </section>
+    <section>
+        <h2>$resource shortcut methods</h2>
+
+        <p class="fragment fade-in">$resource.get</p>
+
+        <p class="fragment fade-in">$resource.save</p>
+
+        <p class="fragment fade-in">$resource.query</p>
+
+        <p class="fragment fade-in">$resource.remove</p>
+
+        <p class="fragment fade-in">$resource.delete</p>
+
+    </section>
+    <section>
+        <h2>Promises и философия deffered-объектов</h2>
+
+        <pre class="big-code fragment fade-in"><code data-trim>
+function getUser(name) {
+    var deffered = $q.defer();
+    var UserApi = $resource('http://restserver.com/api/user/:name',
+                            { query: { params: { name: 'name' } } });
+    UserApi.query( name: name ), function(user){
+        // что-то делаем с пользователем
+        deferred.resolve(user);
+    });
+    return deffered.promise;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Пример: exception propagation</h2>
+            <pre class="big-code fragment fade-in"><code data-trim>
+            getUser('jonny', function(err, user){
+                if(err) {
+                    ui.error(err);
+                } else {
+                    getBestFriend(user, function(err, friend){
+                        if (err) {
+                            ui.error(err);
+                        } else {
+                            ui.showBestFriend(friend,
+                                function(err, friend){
+                                    if (err) {
+                                        ui.error(err);
+                                }
+                        }
+                }
+            });
+
+            </code></pre>
+    </section>
+    <section>
+        <h2>Пример: exception propagation</h2>
+        <h3>Promises</h3>
+            <pre class="big-code fragment fade-in"><code data-trim>
+        getUser('jonny').then(getBestFriend, ui.error)
+                .then(ui.showBestFriend, ui.error);
+            </code></pre>
+    </section>
+</section>
+
+<section class="blue">
+
+    <a href="ru.kinect.html"><h1>Интерактивные приложения с Kinect-управлением</h1>
+        <p><img class="no-bg" src="images/kinect-logo.png" alt="Kinect"></p>
+    </a>
+    <p><a href="https://github.com/jonny-novikov/kinect-angular-showcase" target="_blank">https://github.com/jonny-novikov/kinect-angular-showcase</a></p>
+</section>
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        width: 1280,
+        height: 700,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal.fullscreen.js' },
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<html ng-app="orderApp">
+<head>
+    <meta charset="utf-8"/>
+    <title>Web-студия</title>
+
+    <!-- Google web fonts -->
+    <link href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" rel='stylesheet' />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+<form id="main" ng-controller="order">
+    <h1>Услуги</h1>
+    <ul>
+        <!-- Итерация по списку услуг для генерации DOM элементов -->
+        <li ng-repeat="service in services" ng-click="toggleActive(service)" ng-class="{active: service.active}">
+            {{service.name}} <span>$ {{ service.price }}</span>
+        </li>
+    </ul>
+    <div class="total">
+        Всего: <span>$ {{ total() }}</span>
+    </div>
+</form>
+<!-- Логика приложения -->
+<script src="../angular/angular.js"></script>
+<script src="service.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Kinected AngularJS</title>
+
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Jonny Novikov">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/night.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.fullscreen.css">
+    <link rel="stylesheet" href="css/overrides.css">
+    <link rel="stylesheet" href="css/kinect.css">
+
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body id="body">
+<div class="reveal">
+
+<div class="slides">
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Вступление
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section class="red">
+    <a href="ru.index.html"><img src="images/logo.png" alt="AngularJS"></a>
+    <img class="kinect-logo" src="images/kinect-logo.png" alt="Kinect">
+
+    <h1>AngularJS + Kinect</h1>
+    <p class="fragment fade-in">Часть 2</p>
+</section>
+
+<section class="orange">
+    <section>
+        <h1>Ivan Novikov</h1>
+    </section>
+
+    <section>
+        <h1>Кто я?</h1>
+    </section>
+    <section>
+        <img src="images/jonny.png" alt="Jonny">
+        <h2>Ivan Novikov</h2>
+        <p>Software developer</p>
+        <p><a href="http://jonnynovikov.com/" target="_blank">http://jonnynovikov.com/</a></p>
+
+
+    </section>
+
+</section>
+
+
+<section class="blue">
+    <img src="images/kinect/kinect-sensor.png" alt="Kinect">
+
+    <h1>Интерактивные приложения с Kinect-управлением</h1>
+</section>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MODULE BASIC ONE
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<section class="blue">
+    <section>
+        <h2>Kinect for Windows!</h2>
+
+        <p class="fragment fade-in">История Kinect</p>
+
+
+    </section>
+
+    <section>
+        <h2>История Kinect</h2>
+
+        <p class="fragment fade-in">Представлен 1 июня 2009 года Разработано в 2010.</p>
+
+        <p class="fragment fade-in">Вышел для консоли 4 ноября 2010 года в США.</p>
+
+        <p class="fragment fade-in">Приз "самое инновационное техническое устройство" в 2011 году.</p>
+
+        <p class="fragment fade-in">Поставки версии для Windows были начаты 1 февраля 2012 года.</p>
+
+    </section>
+
+
+</section>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MODULE BASIC TWO
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <section class="green">
+
+        <section>
+            <h2>Интерация с пользователем</h2>
+        </section>
+
+        <section>
+            <h2>Обнаружение пользователей</h2>
+            <img src="images/kinect/track-area.png" alt="Tracking">
+        </section>
+
+        <section>
+            <h2>Обнаружение пользователей</h2>
+            <img src="images/kinect/tracking.png" alt="Tracking">
+        </section>
+
+        <section>
+            <h2>Обработка данных сенсором</h2>
+            <img width="500px" src="images/kinect/tracking-states.png" alt="Tracking">
+        </section>
+
+    </section>
+
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MODULE BASIC FOUR
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <section class="red">
+        <section>
+            <h2>Обработка движений и жестов</h2>
+
+            <p class="fragment fade-in">Модуль распознавания</p>
+
+            <p class="fragment fade-in">Базовый алгоритм</p>
+
+            <p class="fragment fade-in">Непрерывный анализ</p>
+        </section>
+        <section>
+            <h2>Модуль распознавания</h2>
+
+            <p class="fragment fade-in">Отслеживание состояний скелета</p>
+
+            <p class="fragment fade-in"><img height="450px" src="images/kinect/gestures.png" alt="Compile"></p>
+        </section>
+        <section>
+            <h2>Базовый алгоритм</h2>
+
+            <p class="fragment fade-in">Отслеживание состояний скелета</p>
+
+            <p class="fragment fade-in"><img height="350px" src="images/kinect/gesture-algorithm.png" alt="Compile">
+                <img height="350px" src="images/kinect/gesture-classes.png" alt="Compile"></p>
+        </section>
+
+        <section>
+            <h2>Непрерывный анализ</h2>
+
+            <p class="fragment fade-in">Получение физических параметров (дистанция, скорость)</p>
+            <p class="fragment fade-in">Анализ текущей позиции (стоячая поза, сидячая)</p>
+            <p class="fragment fade-in">Калибровка</p>
+
+        </section>
+
+    </section>
+
+    <section class="blue">
+        <section>
+            <h2>Архитектура приложений с Kinect управлением</h2>
+
+
+
+        </section>
+
+        <section>
+            <h2>Архитектура приложения</h2>
+
+            <p><img src="images/design/stage1.png" alt="Design"></p>
+
+        </section>
+
+        <section>
+            <h2>Архитектура приложения</h2>
+
+            <p><img src="images/design/stage2.png" alt="Design"></p>
+
+        </section>
+
+        <section>
+            <h2>Архитектура приложения</h2>
+
+            <p><img src="images/design/stage3.png" alt="Design"></p>
+
+        </section>
+
+        <section>
+            <h2>Собираем воедино</h2>
+            <pre class="big-code fragment fade-in"><code data-trim>
+// script.js
+(function() {
+    angular.module('helloApp', [])
+    .controller('hello', function ($scope, kinectservice) {
+        $scope.message = 'AngularJS!';
+
+        kinectservice.promoteButtons();
+
+        $scope.onClick = function() {
+            $scope.message = 'AngularJS + Kinect!';
+        }
+    });
+})();
+// index.html
+&lt;html ng-app="helloApp"&gt;
+&lt;body ng-controller="hello"&gt;
+&lt;span class='kinect-button' ng-click='onClick()'&gt;Hello {{message}}&lt;/span&gt;
+&lt;/body>
+&lt;/html&gt
+                </code></pre>
+        </section>
+    </section>
+
+
+    <section class="yellow">
+
+        <a href="ru.kinect.html"><h1>Продолжение следует</h1></a>
+        <p class="fragment fade-in">Реализация больших SPA приложений</p>
+        <p class="fragment fade-in">Продвинутые анимации с помощью JS и CSS</p>
+        <p class="fragment fade-in">и еще много всего...</p>
+        <p class="fragment fade-in"><a href="https://github.com/jonny-novikov/kinect-angular-showcase" target="_blank">https://github.com/jonny-novikov/kinect-angular-showcase</a></p>
+    </section>
+
+<section class="blue">
+    <section>
+        <h1>Q&A</h1>
+
+        <p><a href="https://github.com/jonny-novikov/kinect-angular-showcase" target="_blank">https://github.com/jonny-novikov/kinect-angular-showcase</a></p>
+
+    </section>
+</section>
+</div>
+
+</div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        width: 1280,
+        height: 700,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal.fullscreen.js' },
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+</script>
+
+</body>
+</html>
