@@ -1,6 +1,6 @@
 # Continuous testing
 
-Слайды лекции.
+Lecture slides.
 
 
 ## View online
