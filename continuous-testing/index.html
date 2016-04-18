@@ -1,0 +1,440 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Continuous testing</title>
+
+    <meta name="description" content="Разработка ПО с непрерывным тестированием">
+    <meta name="author" content="Jonny Novikov">
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.min.css">
+    <link rel="stylesheet" href="css/theme/sky.css" id="theme">
+    <link rel="stylesheet" href="css/reveal.fullscreen.css">
+    <link rel="stylesheet" href="css/overrides.css">
+    <link rel="stylesheet" href="css/kinect.css">
+
+    <meta property="og:title" class="fb_og_meta" content="Разработка ПО с непрерывным тестированием" />
+    <meta property="og:type" class="fb_og_meta" content="website" />
+    <meta property="og:url" class="fb_og_meta" content="http://jonnynovikov.com/speak/continuous-testing" />
+    <meta property="og:image" class="fb_og_meta" content="http://jonnynovikov.com/speak/continuous-testing/images/title.png" />
+    <meta property="og:description" class="fb_og_meta" content="Презентация лекции о непрерывном тестировании во время разработки ПО" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+    <script>
+        document.write('<link rel="stylesheet" href="css/print/' + ( window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+
+<body id="body">
+<div class="reveal">
+
+    <div class="slides">
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        Вступление
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="">
+            <h1 style="margin-top:200px;">Continuous testing</h1>
+            <p>Ivan Novikov</p>
+        </section>
+
+        <section class="">
+            <section>
+                <h1>Новиков Иван</h1>
+
+                <p class=""><a href="http://jonnynovikov.com/"
+                               target="_blank">http://jonnynovikov.com/</a></p>
+
+                <p class="">@jonny</p>
+            </section>
+
+            <section>
+                <h2>Моя позиция может не совпадать с позицией компаний, в которых я работаю</h2>
+            </section>
+
+            <section>
+                <h1>Кто я?</h1>
+            </section>
+            <section>
+                <img src="images/jonny.png" alt="Jonny">
+
+                <h2>Novikov Ivan</h2>
+
+                <p>CTO at <a target="_blank" href="http://www.amiforus.com">Amiforus</a> & Backend engineer at <a
+                        target="_blank" href="http://www.ozon.travel">ozon.travel</a></p>
+
+                <p><a href="http://jonnynovikov.com/" target="_blank">http://jonnynovikov.com/</a></p>
+            </section>
+
+        </section>
+
+        <section class="">
+            <h1>Agenda</h1>
+            <p class="">TDD</p>
+            <p class="">РЕФАКТОРИНГ</p>
+            <p class="">АРХИТЕКТУРА</p>
+            <p class="">ПРОЦЕССЫ</p>
+            <p class="">ПРИМЕРЫ НА C#</p>
+            <p class="">ДИАГНОЗ И ЗАКЛЮЧЕНИЕ</p>
+            <p class="">Q&A</p>
+        </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        DEFINITIONS
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="">
+            <section>
+                <h2>TDD?</h2>
+
+
+            </section>
+
+            <section>
+                <h2>TDD...</h2>
+		
+                <p>будем дальше считать академическим видом программирования</p>
+				<p>SUT, SUD, .... почему все-таки TDD - огромный вклад в развитие инженерии в целом?</p>
+            </section>
+
+        </section>
+
+        <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        РЕФАКТОРИНГ
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="">
+
+            <section>
+                <h2>РЕФАКТОРИНГ</h2>
+                <p class="">не должен изменять семантику</p>
+                <p class="">должен улучшать качество</p>
+            </section>
+
+            <section>
+                <h2>РЕФАКТОРИНГ</h2>
+                <p class="">не панацея</p>
+                <p class="">стоимость, необходимость</p>
+            </section>
+
+        </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        АРХИТЕКТУРА
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+            <section class="">
+                <section>
+                    <h2>АРХИТЕКТУРА</h2>
+                </section>
+
+                <section>
+                    <h2>Несовершенная архитектура</h2>
+                    <p class="">непредвиденные изменения</p>
+                    <p class="">существенные изменения</p>
+                </section>
+
+                <section>
+                    <h2>REFACTOR!</h2>
+                    <p class="">непредвиденные изменения</p>
+                    <h2>REBUILD!</h2>
+                    <p class="">существенные изменения</p>
+                </section>
+
+                <section>
+                    <h2>РЕФАКТОРИНГ ТРЕБУЕТ АНАЛИЗА</h2>
+                    <p class="">Рефактори СВОЁ!</p>
+                    <p class="">хлам от рефакторинга останется хламом (GIGO)</p>
+                    <p class="">никакое его количество не спасет дефектную архитектуру</p>
+                </section>
+
+                <section>
+                    <h2>Rebuild</h2>
+                    <p class="">Удачи!</p>
+                </section>
+
+            </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        GOALS
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+        <section class="">
+
+            <section>
+                <h2>ПРОЦЕССЫ</h2>
+                <p class=""></p>
+            </section>
+
+            <section>
+                <h2>РАЗРАБОТКА, управляемая тестами</h2>
+                <h3 class="fragment fade-in">полноценный метод <b>разработки</b> ПО</h3>
+            </section>
+
+            <section>
+                <h2>Test First Development</h2>
+                <p class="">create test</p>
+                <p class="">modify: code the simple thing</p>
+                <p class="">refactor</p>
+            </section>
+
+            <section>
+                <h3>"Make it work. Make it right. Make it fast."</h3>
+                <p><span style="float: right;">Kent Beck</span></p>
+                <p><img src="images/rg-refactor.jpg"/></p>
+            </section>
+
+            <section>
+                <h2>Test Driven Development</h2>
+                <p class="">create test</p>
+                <p class="">check test is failed</p>
+                <p class="">modify: code the simple thing</p>
+                <p class="">ensure test is passed</p>
+                <p class="">continuous refactor (unify)</p>
+            </section>
+
+            <section>
+                <h2>"Лондонская школа TDD"</h2>
+                <p class="">моки как средство унификации проектирования ПО</p>
+            </section>
+
+        </section>
+
+        <section class="">
+            <section>
+                <h2>Реальность</h2>
+                <p class=""><img src="images/new-reality.png"/></p>
+            </section>
+
+            <section>
+                <h2>Code example</h2>
+                <p class=""><img src="images/writing-code.gif"/></p>
+            </section>
+
+            <section>
+                <h1>О спецификациях (MSpec)</h1>
+                <p class=""><img src="images/mspec.png"/></p>
+            </section>
+
+            <section>
+                <h2>Основные принципы</h2>
+                <p class="">Простота (KISS)</p>
+                <p class="">"Чистый" код</p>
+                <p class="">Не делай то, что сейчас не используешь (YAGNI)</p>
+            </section>
+
+        </section>
+
+        <section class="">
+
+            <section>
+                <h2>Attention</h2>
+                <p class=""></p>
+            </section>
+
+            <section>
+                <h2>Будьте скептиком</h2>
+                <p class="">Разработку, управляемую тестами стоит попробовать</p>
+                <p class="">Моки необходимо использовать</p>
+                <p class="">ТОЛЬКО там, где они действительно нужны</p>
+                <p class="">и еще...</p>
+            </section>
+
+            <section>
+                <h2>Где меня обманули</h2>
+                <p>тесты - это не все, что нужно для спецификации ПО</p>
+                <p>тест более специфичен, чем user story</p>
+                <p>поиски общих правил, нет рецепта генерации спецификации по тестам</p>
+            </section>
+
+            <section>
+                <h2>Почему все-таки классная штука?</h2>
+                <p class="">каждый новый код должен сопровождаться тестами</p>
+                <p class="">экстремальный вариант хороший способ заставить себя сделать это</p>
+            </section>
+        </section>
+
+        <section class="">
+            <section>
+                <h1>Немного кода</h1>
+                <p class=""><img src="images/writing-code.gif"/></p>
+            </section>
+
+            <section>
+                <h1>Почему многие ВООБЩЕ не пишут тесты?</h1>
+                <p class="">- "Зачем проверять только состояния?"</p>
+                <p class="">- "Это отнимет всё время"</p>
+                <p class="">- "Их невозможно поддерживать"</p>
+            </section>
+
+            <section>
+                <h1>Почему ПИШУТ и даже разрабатывают через тесты?</h1>
+                <p class="">У них есть рецепт, который другие не знают?</p>
+            </section>
+
+            <section>
+                <h1>Проблемы заглушек</h1>
+                <p class=""><img src="images/without-isolation.png"/></p>
+            </section>
+
+            <section>
+                <h1>Isolation Framework</h1>
+                <p>Используя NSubstitute <a href="https://github.com/nsubstitute/NSubstitute" target="_blank">https://github.com/nsubstitute/NSubstitute</a></p>
+				<p class="">код с предыдущего слайда превращается в</p>
+                <p class=""><img src="images/isolation.png"/></p>
+            </section>
+
+            <section>
+                <h1>Mocking Framework</h1>
+                <p>Moq <a href="https://github.com/Moq/moq4" target="_blank">https://github.com/Moq/moq4</a></p>
+                <p class=""><img src="images/moq.png"/></p>
+            </section>
+
+            <section>
+                <h1>С блэкджеком и... девочками</h1>
+                <p>IoC + Nancy <a href="https://github.com/NancyFx/Nancy" target="_blank">https://github.com/NancyFx/Nancy</a></p>
+                <p class=""><img src="images/nancy.png"/></p>
+            </section>
+
+            <section>
+                <h1>О необходимости тестирования</h1>
+                <p class=""><img src="images/web-test.png"/></p>
+            </section>
+
+            <section>
+                <h1>Тесты - тоже искусство</h1>
+                <p>Selenium WebDriver <a href="http://seleniumhq.org" target="_blank">http://seleniumhq.org</a></p>
+                <p class=""><img src="images/webdriver.png"/></p>
+            </section>
+
+            <section>
+                <h1>Вырастающая сложность</h1>
+                <p class=""><img src="images/complexity.png"/></p>
+            </section>
+
+            <section>
+                <h1>Поддержка</h1>
+                <p class=""><img src="images/tdd-zombie.jpg"/></p>
+            </section>
+
+            <section>
+                <h3>Проектирование и программирование - </h3>
+                <h3>виды человеческой деятельности;</h3>
+                <h3>стоит об этом забыть – и все пропало.</h3>
+                <br/>
+                <p style="float: right">Бьярн Страуструп, 1991</p>
+            </section>
+        </section>
+
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        WHAT TO READ?
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <section class="">
+            <section>
+                <h2>Что начать читать завтра?</h2>
+                <p><a href="http://www.bainbrdg.demon.co.uk/Papers/Ironies.html" target="_blank">Ironies of Automation, 1983</a></p>
+                <p class="">Test-Driven development: By example (Kent Beck, 2003)</p>
+                <p>Исскуство автономного тестирования (Рой Ошервуд):</p>
+                <p><a href="http://bit.ly/artoftest-ru" target="_blank">русская</a> или <a href="http://bit.ly/artoftest-en" target="_blank">english</a></p>
+                <p>&</p>
+                <h2>Что посмотреть вместо сериала?</h2>
+                <p>Norwegian Developers Conference (NDC)</p>
+                <p class=""><a href="http://j.mp/ndcconferences" target="_blank">http://j.mp/ndcconferences</a></p>
+            </section>
+        </section>
+
+        <section class="">
+            <section>
+                <h1>Q&A</h1>
+
+                <p>Презентация тут: <a href="http://j.mp/continuous-test" target="_blank">http://j.mp/continuous-test</a>
+                </p>
+
+            </section>
+        </section>
+    </div>
+</div>
+
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.min.js"></script>
+
+<script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        width: 1280,
+        height: 700,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'concave', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            {src: 'js/reveal.fullscreen.js'},
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {
+                src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            }
+            }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+</script>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+  if( window.location.search.match( /print-pdf/gi ) ) {
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'reveal.js/css/print/pdf.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  }
+</script>
+</body>
+</html>
