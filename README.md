@@ -4,7 +4,7 @@ Slides and showcases
 
 ### Kinect and Angular Showcase
 
-Online [http://jonnynovikov.com/speak/kinect-angular](http://j.mp/kinect-angular)
+View slides [online](http://j.mp/kinect-angular)
 
 Source [on this repository](https://github.com/jonny-novikov/speaking/tree/master/kinect-angular-showcase)
  
@@ -12,14 +12,22 @@ Source [on this repository](https://github.com/jonny-novikov/speaking/tree/maste
 
 ### Proactive and user-centric development approach
 
-Online [http://jonnynovikov.com/speak/proactive](http://j.mp/proactive-speaking)
+View slides [online](http://j.mp/proactive-speaking)
 
 Source [on this repository](https://github.com/jonny-novikov/speaking/tree/master/proactive-approach)
 
 ### Writing quality and clean code
 
-Online [http://jonnynovikov.com/speak/quality-evolve](http://j.mp/quality-evolve)
+View slides [online](http://j.mp/quality-evolve)
 
 Source [on this repository](https://github.com/jonny-novikov/speaking/tree/master/quality-evolve-showcase)
+
+## Lectures
+
+### Continuous testing
+
+View slides [online](http://j.mp/continuous-test)
+
+Source [on this repository](https://github.com/jonny-novikov/speaking/tree/master/continuous-testing)
 
 ### Thanks everybody who likes my speaking!
