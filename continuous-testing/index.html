@@ -73,7 +73,7 @@
             <section>
                 <img src="images/jonny.png" alt="Jonny">
 
-                <h2>Novikov Ivan</h2>
+                <h2>Ivan Novikov</h2>
 
                 <p>CTO at <a target="_blank" href="http://www.amiforus.com">Amiforus</a> & Backend engineer at <a
                         target="_blank" href="http://www.ozon.travel">ozon.travel</a></p>
@@ -96,17 +96,57 @@
         <section class="">
             <section>
                 <h2>Качество ПО</h2>
-                <p></p>
+                <p><img src="images/quality.png"></p>
+            </section>
+
+            <section>
+                <h2>Обеспечение качества (SQA)</h2>
+                <p>средства мониторинга процессов разработки программного обеспечения</p>
+				<p>методы, используемые для контроля качества</p>
 
             </section>
 
             <section>
-                <h2></h2>
-		
-                <p></p>
-				<p></p>
+                <h2>Функция качества</h2>
+                <p><pre style="padding: 20px; font-size: 1em;">
+                    Q() {
+                        researchAndRefine()
+                        specify()
+                        buildAndTest()
+                        deploy()
+                        monitor()
+                    }</pre>
+                </pre>
             </section>
 
+            <section>
+                <h2>Обеспечение качества</h2>
+                <p>
+                <pre style="padding: 20px; font-size: 1em;">
+                    do Q() until ...
+                </pre>
+                </pre>
+            </section>
+
+            <section>
+                <h2>Ценность продукта</h2>
+                <p>
+                <pre style="padding: 20px; font-size: 1em;">
+                    Vr = Q(Va),
+                <span style="font-size: 0.6em">
+                                   Vr = real value,
+                                   Va = assumed value
+                </span>
+                </pre>
+
+
+                </p>
+            </section>
+
+            <section>
+                <h2>Self-test</h2>
+                <p><a href="https://github.com/nspectator/NSpectator">https://github.com/nspectator/NSpectator</a></p>
+            </section>
         </section>
 
         <!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -120,6 +160,32 @@
                 <p class=""></p>
             </section>
 
+            <section>
+                <h2>Метрики кода</h2>
+                <p class="">Статический анализ</p>
+                <p class="">Покрытие кода</p>
+                <p class="">...</p>
+                <p><a href="ndepend/NDependReport.html">Пример отчета</a></p>
+            </section>
+
+            <section>
+                <h2>Покрытие кода</h2>
+                <p><img src="images/ndepend.png" width="500"></p>
+            </section>
+
+            <section>
+                <h2>Метрики разработчика и команды</h2>
+                <p class="">Скорость, продуктивность, ...</p>
+            </section>
+
+            <section>
+                <h2>Метрики разработчика и команды</h2>
+                <p class=""><b>Скорость != продуктивность</b></p>
+            </section>
+
+            <section>
+                <h2>Нельзя управлять тем, что невозможно измерить...</h2>
+            </section>
         </section>
 
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -148,21 +214,34 @@
         <section class="">
 
             <section>
-                <h2>Continuous integration</h2>
-                <p class=""></p>
+                <h2>Continuous integration & testing</h2>
+                <p class=""><a href="https://www.thoughtworks.com/continuous-integration">ThoughtWorks, Мартин Фаулер и др.</a></p>
             </section>
-
-        </section>
-
-        <section class="">
 
             <section>
-                <h2>Continuous testing</h2>
-                <p class=""></p>
+                <h2>Appveyor</h2>
+                <p>Нужен всего один файл в <a href="https://ci.appveyor.com/project/jonny-novikov/nspectator">проекте</a></p>
+                <p>
+                <pre style="padding: 10px; font-size: 0.7em;">
+                <b>before_build:</b>
+                  ...
+                  - nuget-restore
+
+                <b>build:</b>
+                  project: NSpectator.sln
+                  verbosity: normal
+
+                <b>test:</b>
+                  assemblies:
+                  - NSpectator.Specs.dll
+
+                <b>artifacts:</b>
+                 - path: src\NSpectator\bin\Debug\NSpectator.dll
+            </pre>
+                </p>
+
             </section>
-
         </section>
-
 
         <section class="">
 
@@ -172,23 +251,50 @@
             </section>
 
             <section>
-                <h2>Development driven by <b>continuously</b> testing</h2>
-                <p class=""></p>
+                <h2>Самодокументируемый код</h2>
+                <p>Раньше, чаще, везде</p>
             </section>
 
+            <section>
+                <h2>Процесс</h2>
+                <p><img src="images/ContinuousTestingDevOps.png"></p>
+            </section>
+            <section>
+                <h2><b>Continuously</b> testing</h2>
+                <p class="">Visual studio, C#</p>
+            </section>
+
+            <section>
+                <h2>Инструменты</h2>
+                <p><a href="http://continuoustests.com/">ContinuousTests</a></p>
+                <p><a href="https://github.com/codereflection/Giles">Giles</a></p>
+                <p>Коммерческие:</p>
+                <p><a href="https://www.jetbrains.com/resharper" target="_blank">Resharper</a></p>
+                <p><a href="http://www.ncrunch.net">NCrunch</a></p>
+            </section>
         </section>
 
+        <section>
+            <section>
+                <h2>Изучение xTDD</h2>
+                <p><img src="images/Kata.jpg" height="650"></p>
+            </section>
 
+            <section>
+                <h2>Kata`s</h2>
+                <p></p>
+            </section>
+        </section>
+        
         <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-        WHAT TO READ?
+        Материалы
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
         <section class="">
             <section>
                 <h2>Материалы</h2>
-                <p><a href="http://www.bainbrdg.demon.co.uk/Papers/Ironies.html" target="_blank">Ironies of Automation, 1983</a></p>
-                <p class="">Test-Driven development: By example (Kent Beck, 2003)</p>
-                <p>Исскуство автономного тестирования (Рой Ошервуд):</p>
-                <p><a href="http://bit.ly/artoftest-ru" target="_blank">русская</a> или <a href="http://bit.ly/artoftest-en" target="_blank">english</a></p>
+                <p><a href="http://osherove.com/tdd-kata-1" target="_blank">Roy Osherove Blog - TDD Kata</a></p>
+                <p><a href="https://www.manning.com/books/bdd-in-action">BDD In Action, John Ferguson Smart, Manning 2014</a></p>
+                <p><img src="images/bdd-in-action.png"></p>
             </section>
         </section>
 
