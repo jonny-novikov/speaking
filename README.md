@@ -1,3 +1,5 @@
+[![Contact me on Codementor](https://cdn.codementor.io/badges/contact_me_github.svg)](https://www.codementor.io/jonnynovikov?utm_source=github&utm_medium=button&utm_term=jonnynovikov&utm_campaign=github)
+
 # My public speakings
 
 Slides and showcases
